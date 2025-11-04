@@ -1,0 +1,24 @@
+# ===========================================================================
+# FSDAF 核心参数配置文件 (NDVI Data Fusion)
+# ===========================================================================
+
+w: 25              # 局部搜索窗口大小 (Window size)
+num_similar_pixel: 30  # 用于预测的相似像素数量 (Number of similar pixels for prediction)
+min_class: 8.0     # 最小分类类别数 (Minimum number of land cover classes)
+max_class: 15      # 最大分类类别数 (Maximum number of land cover classes)
+num_pure: 20       # 纯净像素的最小数量 (Minimum number of pure pixels in a block, 适当减小有助于提高变化捕捉能力)
+
+
+DN_min: -2000      # 数据的最小有效值
+DN_max: 10000.0    # 数据的最大有效值
+scale_factor: 10   # 数据的缩放因子
+block_size: 40     # 影像分块处理的大小（加速处理和管理内存）
+background: -28672 # 影像的 NoData/背景填充值
+background_band: 1 # NoData 值所对应的波段
+
+
+I: 40              # 最大迭代次数 (Maximum number of iterations)
+maxStdv: 150       # 标准差阈值（用于类别分裂，值越大越容易分裂）
+minDis: 50         # 类别间最小距离阈值（用于类别合并，值越小越容易合并）
+minS: 30           # 最小样本数阈值（用于丢弃类，小于该值的类别将被丢弃）
+M: 0.05            # 迭代间聚类变化的百分比阈值（用于停止算法）

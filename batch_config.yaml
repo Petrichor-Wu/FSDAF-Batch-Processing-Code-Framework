@@ -1,0 +1,31 @@
+# FSDAF批量处理配置文件
+
+# 输入数据目录
+# 预测时间低分辨率影像文件夹 (0.05°重采样到500m)
+coarse_prediction_dir: "E:/Ta_fusion/Ta_fusion_data_2020to2024/NDVI/MCD19A3CMG/origin_tif_area_500_Processed"
+
+# 第一对高分辨率影像文件夹 (500m分辨率)
+fine_first_pair_dir: "E:/Ta_fusion/Ta_fusion_data_2020to2024/NDVI/MOD13Q1/origin_nodata_500_Processed"
+
+# 第一对低分辨率影像文件夹 (高分辨率影像聚合到0.05°再重采样到500m)
+coarse_first_pair_dir: "E:/Ta_fusion/Ta_fusion_data_2020to2024/NDVI/MOD13Q1/origin_nodata_coarse_Processed"
+
+# 临时文件夹
+temp_dir: "E:/Ta_fusion/Ta_fusion_data_2020to2024/NDVI/FSDAF_python/temp"
+
+# 输出文件夹
+output_dir: "E:/Ta_fusion/Ta_fusion_data_2020to2024/NDVI/NDVI_STF_results"
+
+# 参数文件路径
+parameters_file: "E:/Ta_fusion/Ta_fusion_data_2020to2024/NDVI/FSDAF_python/py_FSDAF_0331/parameters_fsdaf.yaml"
+
+# 时间匹配设置
+# 最大允许的时间差异（天）
+max_time_diff_days: 16
+
+# 处理设置
+# 并行处理工作线程数（根据CPU核心数调整）
+parallel_workers: 1
+
+# 是否覆盖已存在的输出文件
+overwrite: false
