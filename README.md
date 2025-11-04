@@ -1,7 +1,3 @@
-Of course. Here is the professional English version of the README for your FSDAF Batch Processing Code Framework.
-
------
-
 # 🚀 FSDAF Batch Processing Code Framework
 
 ### **Project Overview**
